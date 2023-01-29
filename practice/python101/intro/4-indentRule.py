@@ -1,0 +1,5 @@
+print("Line 1.",end="")
+print(" Still Line 1!",end="")
+print(" Also on Line 1!")
+print("Are you OK?")
+print(3.141592653589793)
