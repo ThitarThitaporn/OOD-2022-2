@@ -1,4 +1,4 @@
-class Stack:
+class stack:
     def __init__(self,list = None):
         if list == None:
             self.items =[]
@@ -24,8 +24,8 @@ class Stack:
 
     def isEmpty(self):
         return self.items == []
-        #return len(self.items) == 0
-        #return self.size == 0
+        return len(self.items) == 0
+        return self.size == 0
 
     def size(self):
         return int(len(self.items))
@@ -35,26 +35,3 @@ class Stack:
         for ele in self.items:
             s+=str(ele)+'\n'
         return s
-def parenMatch(listEX):
-    
-    ch = 0
-    S1 = Stack()
-    for ele in listEX:
-        if ele in '({[' :
-            S1.push(ele)
-        elif ele in ')}]':
-            if S1 is not S1.isEmpty():
-                ch = S1.pop()
-                if '({['.index(ch)!= ' )}]'.index(ele): # type: ignore  
-                   
-                    return False
-                    
-            else:
-                return False #close ex
-    if S1.isEmpty():
-        return True
-    return False
-    return 0
-    
-Ex="[[)))))"
-print(parenMatch(Ex))

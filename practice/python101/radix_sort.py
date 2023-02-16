@@ -1,0 +1,2 @@
+q = Queue(l)max_bits= get_max_digit(max(l))qq=[Queue(),Queue(),Queue(),Queue(),Queue(),Queue(),Queue(),Queue(),Queue(),Queue()]foriinrange (1,max_bits+1) : whilenotq.isEmpty() :num = q.deQueue()index_digit= get_digit(num,i)qq[index_digit].enQueue(num)foriinrange (10) :whilenotqq[i].isEmpty() :q.enQueue(qq[i].deQueue())returnq.item
+defget_digit(n, d):foriinrange(d-1):n //= 10returnn % 10
