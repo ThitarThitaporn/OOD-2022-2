@@ -12,7 +12,7 @@ class Stack:
         print( f'Add = {data} and Size = {self.size}')
     
     def pop(self):
-        self.size = len(self.items)-(1)
+        self.size = len(self.items)
         if self.items == []:
             print('-1')
             return -1

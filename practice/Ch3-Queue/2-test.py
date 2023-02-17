@@ -1,23 +1,20 @@
-class Queue:
-    def __init__(self,list=None):
-        if list == None:
-            self.items = []
-        else:
-            self.items = list
-            
-    def enqueue(self,data):
-        self.items.append(data)
-        
+class Queue :
+
+    def __init__(self, list= None):
+        if list== None:self.items= []
+        else:self.items= list
+
+    def enqueue(self,i):
+        self.items.append(i)
+
     def dequeue(self):
         return self.items.pop(0)
-       
-    
-    def size(self):
-        return len(self.items)
-    
+
     def isEmpty(self):
-        return len(self.items) == 0
-    
+        return self.items == []
+
+    def size(self):
+        return len(self.items)   
 people = input("Enter people : ")
 q = Queue()
 for i in range(len(people)):
@@ -43,7 +40,7 @@ for i in range(q.size()):
         cashier1.enqueue(q.dequeue())
         
     if start :
-        j += 1
+        i += 1
         
     
     print(f'{str(i+1)} {q.items} {cashier1.items} {cashier2.items}')
