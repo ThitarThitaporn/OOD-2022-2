@@ -1,10 +1,9 @@
 class Queue:
-    def __init__(self,list=None):
+    def __init__ (self,list = None):
         if list == None:
             self.items = []
         else:
             self.items = list
-            
     def enqueue(self,data):
         self.items.append(data)
         
@@ -12,7 +11,7 @@ class Queue:
         if len(self.items) > 0:
             return self.items.pop(0)
         else:
-            return -1
+            return
         
     def size(self):
         return len(self.items)
@@ -20,25 +19,24 @@ class Queue:
     def isEmpty(self):
         return len(self.items) == 0
     
-inp = input("Enter Input : ").split(",")
 q = Queue()
+inp = input('Enter Input').split(',')
 
 for i in inp:
-    if i[0] == 'E' :
-        print(f'Add {i[2:]} index is {(q.size())}')
+    if i[0] == 'E':
+        print(f'Add {i[2:]} inndex is {q.size()}')
         
         q.enqueue(i[2:])
-        
+    
     else:
         x = q.dequeue()
         if x == -1:
             print(x)
         else:
-            print(f'Pop {x} size in queue is {(q.size())}')
-            
+            print(f'Pop {x} size in queue is {q.size()}')
             
 if q.isEmpty():
-    print("Empty")
+    print('empty')
+    
 else:
-    print(f'Number in Queue is :  {q.items}')
-    #print(f'Number in Queue is : {q.items}')
+    print(f'numbet in queue : {q.items}')
